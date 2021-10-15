@@ -1,3 +1,6 @@
-[ "$#" -ne 1 ] && echo "!!!Passe um arquivo de texto como argumento!!!" && exit 0;
+if [ "$#" -ne 1 ]; then
+	echo "*** usage: $0 <file> ***"
+	exit 0
+fi	
 
 head -1 $1
